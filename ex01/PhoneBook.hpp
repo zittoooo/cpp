@@ -1,16 +1,19 @@
 #include <iostream>
 #include <string>
+#include <iomanip> 
 #include "PhoneBookItem.hpp"
 
 class PhoneBook
 {
 private:
-    PhoneBookItem Itmes[8];
+    int size;
+    PhoneBookItem items[8];
+    std::string addInput(std::string msg);
 public:
-    PhoneBook(/* args */);
+    PhoneBook();
     ~PhoneBook();
 
-    int add();
-    int search();
+    void add();
+    void search();
     int exit();
 };

@@ -1,5 +1,7 @@
 NAME = PhoneBook
-SRC	 = PhoneBook.cpp
+SRC	 = PhoneBook.cpp \
+		PhoneBookItem.cpp \
+	   main.cpp
 OBJ  = $(SRC:.cpp=.o)
 
 all : $(NAME)
