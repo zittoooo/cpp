@@ -28,6 +28,8 @@ public:
         std::string favorite_meal,
         std::string underwear_color,
         std::string darkest_secret);
-    static void print_item(std::string item);
+    static void print_item(std::string item, int newline);
+    void print_one(std::string item);
     void print_summary(int index);
+    void print_contact(void);
 };

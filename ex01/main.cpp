@@ -8,14 +8,18 @@ int main()
     std::cout << "phonebook is ready\n";
     while (1)
     {
+        std::cout << "choose 1.ADD 2.SEARCH 3.EXIT\n";
+        std::cout << "> ";
         std::cin >> input;
-        // if (std::cin.eof())
-        // {
-        //     std::cout << "Bye\n";
-        //     return (0);
-        // }
+        if (std::cin.eof())
+        {
+            std::cout << "Bye\n";
+            exit(0);
+        }
+        
         if (!input.compare("ADD"))
         {
+
             book.add();
         }
         else if (!input.compare("SEARCH"))
@@ -25,7 +29,7 @@ int main()
         else if (!input.compare("EXIT"))
         {
             std::cout << "exit\n";
-            return (0);
+            std::exit(0);
         }
     }
 }

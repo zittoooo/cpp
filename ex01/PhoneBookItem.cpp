@@ -28,17 +28,25 @@ PhoneBookItem::PhoneBookItem(
     this->darkest_secret = darkest_secret;
 }
 
-void PhoneBookItem::print_item(std::string item)
+void PhoneBookItem::print_item(std::string item, int newline)
 {
     std::cout << std::setfill(' ') << std::setw(10) << std::right;
-    // std::cout << item.substr(10) << '|' << "\n";
     std::cout << item << '|';
+    if (newline)
+        std::cout << '\n';    
 }
 
 void    PhoneBookItem::print_summary(int index)
 {
-    print_item(std::to_string(index));
-    print_item(this->firstname);
-    print_item(this->lastname);
-    print_item(this->nickname);
+    print_item(std::to_string(index), 0);
+    print_item(this->firstname, 0);
+    print_item(this->lastname, 0);
+    print_item(this->nickname, 0);
+}
+
+void    PhoneBookItem::print_contact(void)
+{
+    std::cout << "first name : " << this->firstname << '\n';
+    std::cout << "last name  : " << this->lastname << '\n';
+    std::cout << "nickname   : " << this->nickname << '\n';
 }

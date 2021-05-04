@@ -13,10 +13,13 @@ std::string PhoneBook::addInput(std::string msg)
 {
     std::string input;
 
-    // ctrl d
+    if (std::cin.eof())
+    {
+        std::cout << "\nBye\n";
+        std::exit(0);
+    }
     std::cout << msg;
     std::cin >> input;
-
     return (input);
 }
 
@@ -29,8 +32,6 @@ void PhoneBook::add()
         std::cout << "Phone book is full\n";
         return;
     }
-    // std::cout << "first name : ";
-
     this->items[this->size++] = PhoneBookItem(
         addInput("first name: "),
         addInput("last name: "),
@@ -47,14 +48,18 @@ void PhoneBook::add()
 
 void    PhoneBook::search()
 {
-    PhoneBookItem::print_item("index");
-    PhoneBookItem::print_item("first name");
-    PhoneBookItem::print_item("last name");
-    PhoneBookItem::print_item("nick name");
+    PhoneBookItem::print_item("index", 0);
+    PhoneBookItem::print_item("first name", 0);
+    PhoneBookItem::print_item("last name", 0);
+    PhoneBookItem::print_item("nick name", 0);
     std::cout << std::endl;
     for (int i = 0; i < this->size; i++)
     {
         this->items[i].print_summary(i);
         std::cout << std::endl;
     }
+    int index = -1;
+    std::cout << "choose index : ";
+    std::cin >> index;
+    this->items[index].print_contact();
 }

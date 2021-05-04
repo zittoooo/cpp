@@ -15,5 +15,4 @@ public:
 
     void add();
     void search();
-    int exit();
 };
