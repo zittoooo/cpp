@@ -19,7 +19,7 @@ std::string PhoneBook::addInput(std::string msg)
         std::exit(0);
     }
     std::cout << msg;
-    std::cin >> input;
+    getline(std::cin, input);
     return (input);
 }
 

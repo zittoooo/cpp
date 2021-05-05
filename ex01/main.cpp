@@ -10,7 +10,7 @@ int main()
     {
         std::cout << "choose 1.ADD 2.SEARCH 3.EXIT\n";
         std::cout << "> ";
-        std::cin >> input;
+        getline(std::cin, input);
         if (std::cin.eof())
         {
             std::cout << "Bye\n";
@@ -19,7 +19,6 @@ int main()
         
         if (!input.compare("ADD"))
         {
-
             book.add();
         }
         else if (!input.compare("SEARCH"))
