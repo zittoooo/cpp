@@ -8,6 +8,7 @@ int main()
     std::cout << "phonebook is ready\n";
     while (1)
     {
+        fflush(stdin);
         std::cout << "choose 1.ADD 2.SEARCH 3.EXIT" << '\n';
         std::cout << "> ";
         getline(std::cin, input);

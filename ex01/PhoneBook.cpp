@@ -1,6 +1,6 @@
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook(/* args */)
+PhoneBook::PhoneBook()
 {
     this->size = 0;
 }
@@ -59,13 +59,14 @@ void    PhoneBook::search()
         std::cout << std::endl;
     }
     int index = -1;
+    std::string choose;
     std::cout << "choose index : ";
-    std::cin >> index;  // 고쳐야됨
-    std::cin.ignore();
-    fflush(stdin);
-    if (index >= 0 && index < this->size)
-        this->items[index].print_contact();
-    else
+    getline(std::cin, choose);
+    char *end;
+    index = std::strtol(choose.std::string::c_str(), &end, 10);
+    if (std::cin.fail() || *end != '\0' || index < 0 || index >= this->size)
         std::cout << "wrong input!\n";
+    else
+        this->items[index].print_contact();
     return ;
 }
