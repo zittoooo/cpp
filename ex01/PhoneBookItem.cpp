@@ -28,25 +28,36 @@ PhoneBookItem::PhoneBookItem(
     this->darkest_secret = darkest_secret;
 }
 
-void PhoneBookItem::print_item(std::string item, int newline)
+void PhoneBookItem::print_item(std::string str, int item)
 {
-    std::cout << std::setfill(' ') << std::setw(10) << std::right;
-    std::cout << item << '|';
-    if (newline)
-        std::cout << '\n';    
+    if (item && str.length() >= 10)
+    {
+        str[9] = '.';
+        str = str.substr(0 , 10);
+    }
+    std::cout << std::setw(10);
+    std::cout << str << '|';
 }
 
 void    PhoneBookItem::print_summary(int index)
 {
-    print_item(std::to_string(index), 0);
-    print_item(this->firstname, 0);
-    print_item(this->lastname, 0);
-    print_item(this->nickname, 0);
+    print_item(std::to_string(index), 1);
+    print_item(this->firstname, 1);
+    print_item(this->lastname, 1);
+    print_item(this->nickname, 1);
 }
 
 void    PhoneBookItem::print_contact(void)
 {
-    std::cout << "first name : " << this->firstname << '\n';
-    std::cout << "last name  : " << this->lastname << '\n';
-    std::cout << "nickname   : " << this->nickname << '\n';
+    std::cout << "first name     : " << this->firstname << '\n';
+    std::cout << "last name      : " << this->lastname << '\n';
+    std::cout << "nickname       : " << this->nickname << '\n';
+    std::cout << "login          : " << this->login << '\n';
+    std::cout << "postal_address : " << this->postal_address << '\n';
+    std::cout << "email_address  : " << this->email_address << '\n';
+    std::cout << "phone_number   : " << this->phone_number << '\n';
+    std::cout << "birthdaty      : " << this->birthday << '\n';
+    std::cout << "favorite_meal  : " << this->favorite_meal << '\n';
+    std::cout << "underwear color: " << this->underwear_color << '\n';
+    std::cout << "darkest secret : " << this->darkest_secret << '\n';
 }

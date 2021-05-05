@@ -60,6 +60,12 @@ void    PhoneBook::search()
     }
     int index = -1;
     std::cout << "choose index : ";
-    std::cin >> index;
-    this->items[index].print_contact();
+    std::cin >> index;  // 고쳐야됨
+    std::cin.ignore();
+    fflush(stdin);
+    if (index >= 0 && index < this->size)
+        this->items[index].print_contact();
+    else
+        std::cout << "wrong input!\n";
+    return ;
 }
