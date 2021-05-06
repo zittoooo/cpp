@@ -2,6 +2,8 @@
 # define ZOMBIEEVENT_HPP
 #include <iostream>
 #include <string>
+#include <cstdlib>
+#include <ctime>
 #include "Zombie.hpp"
 
 class ZombieEvent
@@ -12,7 +14,7 @@ private:
 public:
     static void setZombieType(std::string type);
     static Zombie *newZombie(std::string name);
-    // static randomChump(Zombie *zombie);
+    static Zombie *randomChump();
 };
 
 // std::string ZombieEvent::type = "first";
