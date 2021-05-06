@@ -1,3 +1,5 @@
+#ifndef PHONEBOOKITEM_HPP
+# define PHONEBOOKITEM_HPP
 #include <iostream>
 #include <iomanip> 
 
@@ -33,3 +35,5 @@ public:
     void print_summary(int index);
     void print_contact(void);
 };
+
+#endif

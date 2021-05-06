@@ -1,3 +1,6 @@
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
+
 #include <iostream>
 #include <string>
 #include <iomanip> 
@@ -16,3 +19,5 @@ public:
     void add();
     void search();
 };
+
+#endif
