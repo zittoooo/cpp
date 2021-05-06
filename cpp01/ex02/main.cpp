@@ -2,18 +2,18 @@
 
 int main()
 {
-    srand(time(NULL));
     ZombieEvent::setZombieType("magician");
-    Zombie *zombie = ZombieEvent::newZombie("jiholee");
+    Zombie *zombie = ZombieEvent::newZombie("Big zombie");
     zombie->announce();
 
-    Zombie *child = ZombieEvent::randomChump();
-    child->announce();
+    Zombie *child1 = ZombieEvent::randomChump();
+    child1->announce();
+
 
     Zombie *child2 = ZombieEvent::randomChump();
     child2->announce();
 
     delete zombie;
-    delete child;
+    delete child1;
     delete child2;
 }

@@ -3,12 +3,14 @@
 
 #include <iostream>
 #include <string>
+#include <random>
 
 class Zombie
 {
 private:
     std::string name;
     std::string type;
+    void printStatus(std::string zombieN);
 
 public:
     Zombie(std::string name, std::string type);

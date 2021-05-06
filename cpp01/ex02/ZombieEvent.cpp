@@ -32,5 +32,5 @@ Zombie    *ZombieEvent::randomChump()
     std::mt19937 gen(rd());
     std::uniform_int_distribution<int> dis(0, 9);
     Zombie *child = new Zombie(name[dis(gen)], type);
-    return (child); 
+    return (child);
 }
