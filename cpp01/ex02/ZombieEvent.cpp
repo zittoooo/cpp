@@ -28,8 +28,9 @@ Zombie    *ZombieEvent::randomChump()
         "567",
         "678"
     };
-    srand(time(0));
-    int rnd = std::rand() % 10;
-    Zombie *child = new Zombie(name[rnd], type);
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<int> dis(0, 9);
+    Zombie *child = new Zombie(name[dis(gen)], type);
     return (child); 
 }
