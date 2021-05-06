@@ -10,7 +10,7 @@ class Zombie
 private:
     std::string name;
     std::string type;
-    void printStatus(std::string zombieN);
+    void printStatus();
 
 public:
     Zombie(std::string name, std::string type);
