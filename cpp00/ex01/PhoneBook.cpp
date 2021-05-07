@@ -11,15 +11,23 @@ PhoneBook::~PhoneBook()
 
 std::string PhoneBook::addInput(std::string msg)
 {
-    std::string input;
+    std::string input = "";
 
-    if (std::cin.eof())
+    while (input.empty())
     {
-        std::cout << "\nBye\n";
-        std::exit(0);
+        std::cout << msg;
+        getline(std::cin, input);
+        if (std::cin.eof())
+        {
+            std::cout << "\nBye\n";
+            std::exit(0);
+        }
+        if (input.empty())
+        {
+            std::cout << "Empty input is not acceptable." << std::endl;
+            continue ;
+        }
     }
-    std::cout << msg;
-    getline(std::cin, input);
     return (input);
 }
 
@@ -62,6 +70,11 @@ void    PhoneBook::search()
     std::string choose;
     std::cout << "choose index : ";
     getline(std::cin, choose);
+    if (std::cin.eof())
+    {
+        std::cout << "\nBye\n";
+        std::exit(0);
+    }
     char *end;
     index = std::strtol(choose.std::string::c_str(), &end, 10);
     if (std::cin.fail() || *end != '\0' || index < 0 || index >= this->size)
