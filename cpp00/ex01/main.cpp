@@ -16,7 +16,7 @@ int main()
         {
             std::cout << "Bye\n";
             exit(0);
-        }    
+        }
         if (!input.compare("ADD"))
             book.add();
         else if (!input.compare("SEARCH"))
@@ -25,6 +25,8 @@ int main()
         {
             std::cout << "exit\n";
             std::exit(0);
-        }    
+        }
+        else
+            std::cout << "not a valid input" << std::endl;
     }
 }
