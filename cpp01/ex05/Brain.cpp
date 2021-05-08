@@ -6,8 +6,7 @@ Brain::Brain() {
 
     address << this;
     this->address = address.str();
-    this->address[1] = 'x';
-    for (int i = 2; i < this->address.length() ; i++)
+    for (unsigned int i = 2; i < this->address.length() ; i++)
     {
        this->address[i] = std::toupper(this->address[i]);
     }
