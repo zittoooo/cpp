@@ -10,7 +10,7 @@ private:
 public:
     ZombieHorde(int N);
     ~ZombieHorde();
-    static void   createZombie(int N); 
+    // static void   createZombie(int N); 
 };
 
 #endif

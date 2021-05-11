@@ -3,15 +3,9 @@
 ZombieHorde::ZombieHorde(int N)
 {
 	this->N = N;
+	Zombie *child = new Zombie[N];
 
-	for(int i = 0; i < this->N; i++)
-	{
-		
-	}
+	delete[] child;
 }
 
-ZombieHorde::~ZombieHorde()
-{
-}
-
-void	ZombieHorde
+ZombieHorde::~ZombieHorde() {}

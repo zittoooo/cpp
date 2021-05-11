@@ -1,9 +1,23 @@
 #include "Zombie.hpp"
-
-Zombie::Zombie(std::string name, std::string type)
-{
-    this->name = name;
-    this->type = type;
+Zombie::Zombie() {
+	std::string name[10] = {
+        "ABC",
+        "DEF",
+        "EFG",
+        "HIJ",
+        "123",
+        "234",
+        "345",
+        "456",
+        "567",
+        "678"
+    };
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<int> dis(0, 9);
+    this->name = name[dis(gen)];
+    this->type = "magician";
+    this->announce();
 }
 
 Zombie::~Zombie()

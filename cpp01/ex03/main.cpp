@@ -2,5 +2,7 @@
 
 int main()
 {
-    ZombieHorde::createZombie(10);
+    int N;
+    std::cin >> N;
+    ZombieHorde zombies(N);
 }
