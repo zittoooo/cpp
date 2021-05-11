@@ -13,6 +13,7 @@ private:
     void printStatus();
 
 public:
+    Zombie();
     Zombie(std::string name, std::string type);
     ~Zombie();
     void announce();
