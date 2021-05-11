@@ -14,5 +14,5 @@ std::string& Weapon::getType()
 
 void    Weapon::setType(std::string type)
 {
-    this->type = "prickly club";
+    this->type = type;
 }

@@ -1,7 +1,7 @@
 #include "HumanA.hpp"
 
 HumanA::HumanA(std::string name, Weapon &weapon)
- : weapon(weapon) , name(name) {}
+ : name(name), weapon(weapon) {}
 
 void    HumanA::attack()
 {
