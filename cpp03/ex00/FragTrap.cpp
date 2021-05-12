@@ -77,7 +77,6 @@ void FragTrap::beRepaired(unsigned int amount)
 
 void FragTrap::vaulthunter_dot_exe(std::string const & target)
 {
-
     if (this->energy < 25)
     {
         std::cout << this->name + " don't have enough energy to use the attack!\n";
@@ -93,5 +92,7 @@ void FragTrap::vaulthunter_dot_exe(std::string const & target)
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<int> dis(0, 4);
+    this->energy -= 25;
     std::cout << this->name << " attacks " << target << " " << stat[dis(gen)] << " skill\n";
+    std::cout << this->name << " energy : " << this->energy << "\n";
 }
