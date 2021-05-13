@@ -18,7 +18,6 @@ private:
     bool dead;
     
 public:
-    // FragTrap();
     ~FragTrap();
     FragTrap(std::string name);
     void rangedAttack(std::string const & target);

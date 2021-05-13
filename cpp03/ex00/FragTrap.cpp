@@ -1,18 +1,7 @@
 #include "FragTrap.hpp"
 
-// FragTrap::FragTrap() {
-//     std::cout << "Default constructor called\n";
-//     this->hit = 100;
-//     this->max_hit = 100;
-//     this->energy = 100;
-//     this->max_energy = 100;
-//     this->level = 1;
-//     this->melee_attack_damage = 30;
-//     this->range_attack_damage = 20;
-//     this->armor_damage_reduction = 5;
-// }
 FragTrap::~FragTrap() {
-    std::cout << name + " GABE OVER\n";
+    std::cout << name + " GAME OVER\n";
 }
 FragTrap::FragTrap(std::string name)
 {
@@ -72,7 +61,7 @@ void FragTrap::beRepaired(unsigned int amount)
         return ;
     }
     this->hit += amount;
-    std::cout << this->name << " HP : " << this->hit << "\n"; 
+    std::cout << this->name << " HP : " << this->hit << "enegy : " << this->energy <<  "\n"; 
 }
 
 void FragTrap::vaulthunter_dot_exe(std::string const & target)
