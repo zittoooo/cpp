@@ -25,7 +25,7 @@ int main()
             return (0);
         char *end;
         select= std::strtol(input.c_str(), &end, 10);
-        if (std::cin.fail() || *end != '\0' || select < 0 || select > 6)
+        if (std::cin.fail() || *end != '\0' || select < 1 || select > 6)
             std::cout << "wrong input\n";
         switch(select)
         {

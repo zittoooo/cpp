@@ -33,7 +33,6 @@ void FragTrap::meleeAttack(std::string const & target)
 
 void FragTrap::takeDamage(unsigned int amount)
 {
-    // if (amount > this->max_hit)
     if (this->hit + this->armor_damage_reduction <= amount)
     {
         this->hit = 0;
@@ -61,7 +60,7 @@ void FragTrap::beRepaired(unsigned int amount)
         return ;
     }
     this->hit += amount;
-    std::cout << this->name << " HP : " << this->hit << "enegy : " << this->energy <<  "\n"; 
+    std::cout << this->name << " HP : " << this->hit << " enegy : " << this->energy <<  "\n"; 
 }
 
 void FragTrap::vaulthunter_dot_exe(std::string const & target)
@@ -72,8 +71,8 @@ void FragTrap::vaulthunter_dot_exe(std::string const & target)
         return ;
     }
     std::string stat[5] = {
-        "I am hungry. 🍗",
-        "I am sleepy. 😪",
+        "beat with a stick",
+        "Avada Kedavra",
         "Slap on the cheek",
         "Throwing rocks",
         "million volts"
