@@ -8,7 +8,7 @@ int main()
         Weapon club = Weapon("crude spiked club");
         HumanA bob("Bob", club);
         bob.attack();
-        club.setType("other type of club");
+        club.setType("burning club");
         bob.attack();
     }
     {
