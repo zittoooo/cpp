@@ -28,11 +28,11 @@ void ScavTrap::challengeNewcomer(std::string const & target)
         return ;
     }
     std::string stat[5] = {
-        "Fireball",
-        "Pulling hair",
-        "Slap on the cheek",
-        "Spraying pest control",
-        "million volts"
+        "Fireball 🔥",
+        "Pulling hair 🧑‍🦲",
+        "Slap on the cheek 🥺",
+        "Spraying pest control ",
+        "million volts ⚡️"
     };
     std::random_device rd;
     std::mt19937 gen(rd());
