@@ -45,7 +45,7 @@ int main()
                 bot.vaulthunter_dot_exe(target);
                 break ;
             case 6:
-                exit(0);
+                return (0);
         }
     }
     return (0);

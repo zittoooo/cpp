@@ -49,7 +49,7 @@ void Fragtrap_play()
                 bot.vaulthunter_dot_exe(target);
                 break ;
             case 6:
-                exit(0);
+                return ;
         }
     }
     return ;
@@ -103,7 +103,7 @@ void Scavtrap_play()
                 bot.challengeNewcomer(target);
                 break ;
             case 6:
-                exit(0);
+                return ;
         }
     }
     return ;
@@ -133,7 +133,7 @@ int main()
                 break ;
             case 2:
                 Scavtrap_play();
-                break ;
+                break ;    
         }
     }
 }
