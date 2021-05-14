@@ -17,7 +17,7 @@ ScavTrap::ScavTrap(std::string name)
     meleeMsg = "Spraying pest control";
 }
 ScavTrap::~ScavTrap() {
-    std::cout << name + "destroyed\n";
+    std::cout << name + " destroyed\n";
 }
 
 void ScavTrap::challengeNewcomer(std::string const & target)

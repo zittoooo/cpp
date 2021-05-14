@@ -3,6 +3,7 @@
 FragTrap::~FragTrap() {
     std::cout << name + " GAME OVER\n";
 }
+
 FragTrap::FragTrap(std::string name)
 {
     std::cout << "Create Player " + name + "\n";
@@ -20,7 +21,6 @@ FragTrap::FragTrap(std::string name)
     rangeMsg =  "Throwing rocks attacks ";
     meleeMsg = "million volts";
 }
-
 
 void FragTrap::vaulthunter_dot_exe(std::string const & target)
 {

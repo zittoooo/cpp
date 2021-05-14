@@ -51,3 +51,8 @@ void ClapTrap::beRepaired(unsigned int amount)
     hit += amount;
     std::cout << name << " HP : " << hit << "\n"; 
 }
+
+std::string ClapTrap::getName()
+{
+    return (this->name);
+}
