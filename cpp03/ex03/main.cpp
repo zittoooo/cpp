@@ -125,6 +125,7 @@ void ninjatrap_play()
         return ;
     ScavTrap Scav_enemy(input);
     FragTrap Frag_enemy(input);
+    NinjaTrap Ninja_enemy(input);
     std::string target(input);
     int select;
     int pick;
@@ -167,7 +168,9 @@ void ninjatrap_play()
                         break ;
                     case 2:
                         bot.ninjaShoebox(Scav_enemy);
-                    case 3: // 
+                        break ;
+                    case 3:
+                        bot.ninjaShoebox(Ninja_enemy);
                 }
                 break ;
             case 6:
@@ -182,7 +185,7 @@ int main()
     std::string input;
     while (1)
     {
-        std::cout << "Choose between 1. FragTrap and 2. ScavTrap 3.Ninja Trap 4.exit\n";
+        std::cout << "strat\nChoose between 1. FragTrap and 2. ScavTrap 3.Ninja Trap 4.exit\n";
         getline(std::cin, input);
         if (std::cin.eof())
             return (0);
@@ -204,6 +207,7 @@ int main()
                 break ;
             case 3:
                 ninjatrap_play();
+                break ;
             case 4:
                 return (0);
         }

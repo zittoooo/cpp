@@ -12,7 +12,7 @@ ScavTrap::ScavTrap(std::string name)
     melee_attack_damage = 20;
     range_attack_damage = 15;
     armor_damage_reduction = 3;
-    head = "R4G-TP Scav";
+    head = "R4G-TP";
     rangeMsg =  "Fireball";
     meleeMsg = "Spraying pest control";
 }

@@ -6,7 +6,7 @@ FragTrap::~FragTrap() {
 
 FragTrap::FragTrap(std::string name)
 {
-    std::cout << "Create Player " + name + "\n";
+    std::cout << "Create FragTrap Player " + name + "\n";
     hit = 100;
     max_hit = 100;
     energy = 100;
@@ -17,7 +17,7 @@ FragTrap::FragTrap(std::string name)
     range_attack_damage = 20;
     armor_damage_reduction = 5;
     dead = 0;
-    head = "R4G-TP Frag";
+    head = "R4G-TP";
     rangeMsg =  "Throwing rocks attacks ";
     meleeMsg = "million volts";
 }
