@@ -12,5 +12,5 @@ void memoryLeak()
 int main()
 {
     memoryLeak();
-    system("leaks a.out");
+    system("leaks ex01");
 }
