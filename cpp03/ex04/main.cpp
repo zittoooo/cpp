@@ -1,6 +1,7 @@
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 #include "NinjaTrap.hpp"
+#include "SuperTrap.hpp"
 
 void Fragtrap_play()
 {
@@ -21,7 +22,7 @@ void Fragtrap_play()
     int select;
     while (1)
     {
-        std::cout << "1.rangedAttack 2.meleeAttakc 3.takeDamage 4.repair 5.vaulthunter 6.exit\n";
+        std::cout << "1.rangedAttack 2.meleeAttakc 3.takeDamage 4.repair 5.vaulthunter 6.restart\n";
         getline(std::cin, input);
         if (std::cin.eof())
             return ;
@@ -75,7 +76,7 @@ void Scavtrap_play()
     int select;
     while (1)
     {
-        std::cout << "1.rangedAttack 2.meleeAttakc 3.takeDamage 4.repair 5.vaulthunter 6.exit\n";
+        std::cout << "1.rangedAttack 2.meleeAttakc 3.takeDamage 4.repair 5.vaulthunter 6.restart\n";
         getline(std::cin, input);
         if (std::cin.eof())
             return ;
@@ -132,7 +133,7 @@ void ninjatrap_play()
     while (1)
     {
         fflush(stdin);
-        std::cout << "1.rangedAttack 2.meleeAttakc 3.takeDamage 4.repair 5.ninjaShoebox 6.exit\n";
+        std::cout << "1.rangedAttack 2.meleeAttakc 3.takeDamage 4.repair 5.ninjaShoebox 6.restart\n";
         getline(std::cin, input);
         if (std::cin.eof())
             return ;
@@ -180,19 +181,104 @@ void ninjatrap_play()
     return ;
 }
 
+void supertrap_play()
+{
+    std::string input;
+
+    std::cout << "enter super trap name. ";
+    getline(std::cin, input);
+    if (std::cin.eof())
+        return ;
+    SuperTrap bot(input);
+    std::cout << "Who is your enemy? ";
+    getline(std::cin, input);
+    if (std::cin.eof())
+        return ;
+    ScavTrap Scav_enemy(input);
+    FragTrap Frag_enemy(input);
+    NinjaTrap Ninja_enemy(input);
+    std::string target(input);
+    int select;
+    int pick;
+    while (1)
+    {
+        fflush(stdin);
+        std::cout << "1.rangedAttack 2.meleeAttakc 3.takeDamage 4.repair 5.ninjaShoebox 6.vaulthunter_dot_exe 7.restart\n";
+        getline(std::cin, input);
+        if (std::cin.eof())
+            return ;
+        char *end;
+        select= std::strtol(input.c_str(), &end, 10);
+        if (std::cin.fail() || *end != '\0' || select < 1 || select > 7)
+        {
+            std::cout << "wrong input\n";
+            continue ;
+        }
+        fflush(stdin);
+        switch(select)
+        {
+            case 1:
+                bot.rangedAttack(target);
+                break ;
+            case 2:
+                bot.meleeAttack(target);
+                break ;
+            case 3:
+                bot.takeDamage(20);
+                break ;
+            case 4:
+                bot.beRepaired(30);
+                break ;
+            case 5:
+                std::cout << "1.FragTrap 2.ScavTrap 3.ninjaTrap\n";
+                std::cin >> pick;
+                switch(pick)
+                {
+                    case 1:
+                        bot.ninjaShoebox(Frag_enemy);
+                        break ;
+                    case 2:
+                        bot.ninjaShoebox(Scav_enemy);
+                        break ;
+                    case 3:
+                        bot.ninjaShoebox(Ninja_enemy);
+                }
+                break ;
+            case 6:
+                std::cout << "1.FragTrap 2.ScavTrap 3.ninjaTrap\n";
+                std::cin >> pick;
+                switch(pick)
+                {
+                    case 1:
+                        bot.vaulthunter_dot_exe(Frag_enemy.getName());
+                        break ;
+                    case 2:
+                        bot.vaulthunter_dot_exe(Scav_enemy.getName());
+                        break ;
+                    case 3:
+                        bot.vaulthunter_dot_exe(Ninja_enemy.getName());
+                }
+                break ;
+            case 7:
+                return ;
+        }
+    }
+    return ;
+}
+
 int main()
 {
     std::string input;
     while (1)
     {
-        std::cout << "strat\nChoose between 1. FragTrap and 2. ScavTrap 3.Ninja Trap 4.exit\n";
+        std::cout << "strat\nChoose between 1. FragTrap and 2. ScavTrap 3.Ninja Trap 4.Super Trap 5.exit\n";
         getline(std::cin, input);
         if (std::cin.eof())
             return (0);
         char *end;
         int select;
         select = std::strtol(input.c_str(), &end, 10);
-        if (std::cin.fail() || *end != '\0' || select < 1 || select > 4)
+        if (std::cin.fail() || *end != '\0' || select < 1 || select > 5)
         {
             std::cout << "wrong input\n";
             continue ;
@@ -209,6 +295,9 @@ int main()
                 ninjatrap_play();
                 break ;
             case 4:
+                supertrap_play();
+                break ;
+            case 5:
                 return (0);
         }
     }

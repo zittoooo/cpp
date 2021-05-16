@@ -3,7 +3,7 @@
 FragTrap::~FragTrap() {
     std::cout << name + " GAME OVER\n";
 }
-
+FragTrap::FragTrap() {}
 FragTrap::FragTrap(std::string name)
 {
     std::cout << "Create FragTrap Player " + name + "\n";

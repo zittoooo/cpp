@@ -1,5 +1,6 @@
 #include "NinjaTrap.hpp"
 
+NinjaTrap::NinjaTrap() {}
 NinjaTrap::NinjaTrap(std::string name)
 {
     std::cout << name + " ninja appeared.\n";
