@@ -9,13 +9,10 @@ class ZombieEvent
 {
 private:
     static std::string type;
-    /* data */
 public:
     static void setZombieType(std::string type);
     static Zombie *newZombie(std::string name);
     static Zombie *randomChump();
 };
-
-// std::string ZombieEvent::type = "first";
 
 #endif

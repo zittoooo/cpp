@@ -3,7 +3,7 @@
 ZombieHorde::ZombieHorde(int N)
 {
 	this->N = N;
-	this->child = new Zombie[N];
+	child = new Zombie[N];
 	std::string name[10] = {
         "ABC",
         "DEF",
@@ -25,11 +25,11 @@ ZombieHorde::ZombieHorde(int N)
 
 ZombieHorde::~ZombieHorde() {
 
-	delete[] this->child;
+	delete[] child;
 }
 
 void ZombieHorde::announce()
 {
-	for (int i = 0; i < this->N; i++)
-		this->child[i].announce();
+	for (int i = 0; i < N; i++)
+		child[i].announce();
 }

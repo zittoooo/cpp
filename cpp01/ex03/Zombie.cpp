@@ -10,13 +10,13 @@ Zombie::Zombie(std::string name, std::string type)
 
 Zombie::~Zombie()
 {
-    std::cout << "<" + this->name + " " + this->type + ">" + " was starved to death\n";
+    std::cout << "<" + name + " " + type + ">" + " was starved to death\n";
 }
 
 void Zombie::announce()
 {
-    std::cout << "<" + this->name  + " " + this->type + ">" << " Braiiiiiiiinnnnss..\n";
-    this->printStatus();
+    std::cout << "<" + name  + " " + type + ">" << " Braiiiiiiinnnss..\n";
+    printStatus();
 }
 
 void Zombie::printStatus()
@@ -29,5 +29,5 @@ void Zombie::printStatus()
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<int> dis(0, 2);
-    std::cout << "<" + this->name + " " +  this->type + "> " << stat[dis(gen)] << "\n";
+    std::cout << "<" + name + " " +  type + "> " << stat[dis(gen)] << "\n";
 }

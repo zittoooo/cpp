@@ -4,7 +4,6 @@
 
 class Human {
 private:
-    std::string address;
     Brain brain;
 public :
     Human();
