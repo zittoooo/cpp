@@ -6,9 +6,11 @@ Fixed::Fixed()
     this->fixedPoint = 0;
 }
 
-Fixed::~Fixed()
+Fixed::Fixed(const Fixed& fixed)
 {
-    std::cout << "Destructor called\n";
+    std::cout << "Copy constructor called\n";
+    // this->fixedPoint = fixed.getRawBits();
+    *this = fixed;
 }
 
 Fixed::Fixed(int const raw)
@@ -23,11 +25,9 @@ Fixed::Fixed(float const raw)
     this->fixedPoint = roundf(raw * (1 << this->fract));
 }
 
-Fixed::Fixed(const Fixed& fixed)
+Fixed::~Fixed()
 {
-    std::cout << "Copy constructor called\n";
-    // this->fixedPoint = fixed.getRawBits();
-    *this = fixed;
+    std::cout << "Destructor called\n";
 }
 
 Fixed& Fixed::operator=(const Fixed& fixed)

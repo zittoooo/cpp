@@ -1,6 +1,10 @@
 #include "NinjaTrap.hpp"
 
 NinjaTrap::NinjaTrap() {}
+NinjaTrap::NinjaTrap(const NinjaTrap & ninja)
+{
+    *this = ninja;
+}
 NinjaTrap::NinjaTrap(std::string name)
 {
     std::cout << name + " ninja appeared.\n";
@@ -17,12 +21,24 @@ NinjaTrap::NinjaTrap(std::string name)
     rangeMsg = "throwing stars";
     meleeMsg = "Swing dagger";
 }
-
 NinjaTrap::~NinjaTrap()
 {
     std::cout << name + " ninja Disappeared.\n";
 }
-
+NinjaTrap& NinjaTrap::operator=(const NinjaTrap & ninja)
+{
+    hit = ninja.hit;
+    max_hit = ninja.hit;
+    energy = ninja.energy;
+    max_energy = ninja.max_energy;
+    level = ninja.level;
+    name = ninja.name;
+    melee_attack_damage = ninja.melee_attack_damage;
+    range_attack_damage = ninja.range_attack_damage;
+    armor_damage_reduction = ninja.armor_damage_reduction;
+    dead = ninja.dead;
+    return (*this);
+}
 void NinjaTrap::ninjaShoebox(FragTrap & Frag)
 {
     if (energy < 25)

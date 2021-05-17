@@ -18,8 +18,11 @@ private:
     bool dead;
     
 public:
-    ~ScavTrap();
+    ScavTrap();
     ScavTrap(std::string name);
+    ScavTrap(const ScavTrap & scav);
+    ~ScavTrap();
+    ScavTrap& operator=(const ScavTrap & scav);
     void rangedAttack(std::string const & target);
     void meleeAttack(std::string const & target);
     void takeDamage(unsigned int amount);

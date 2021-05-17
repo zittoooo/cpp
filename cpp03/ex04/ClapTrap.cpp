@@ -4,9 +4,27 @@ ClapTrap::ClapTrap()
 {
     std::cout << "new ClapTrap\n";
 }
+ClapTrap::ClapTrap(const ClapTrap & clap)
+{
+    *this = clap;
+}
 ClapTrap::~ClapTrap()
 {
     std::cout << "ClapTrap is gone.\n";
+}
+ClapTrap& ClapTrap::operator=(const ClapTrap & clap)
+{
+    hit = clap.hit;
+    max_hit = clap.hit;
+    energy = clap.energy;
+    max_energy = clap.max_energy;
+    level = clap.level;
+    name = clap.name;
+    melee_attack_damage = clap.melee_attack_damage;
+    range_attack_damage = clap.range_attack_damage;
+    armor_damage_reduction = clap.armor_damage_reduction;
+    dead = clap.dead;
+    return (*this);
 }
 void ClapTrap::rangedAttack(std::string const & target)
 {

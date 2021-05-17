@@ -1,5 +1,6 @@
 #include "SuperTrap.hpp"
 
+SuperTrap::SuperTrap() {}
 SuperTrap::SuperTrap(std::string name){
     std::cout << name + " is half Fragtrap, half Ninjatrap.\n";
     hit = 100;
@@ -15,5 +16,23 @@ SuperTrap::SuperTrap(std::string name){
     rangeMsg =  "Throwing rocks attacks ";
     meleeMsg = "Swing dagger";
 }
+SuperTrap::SuperTrap(const SuperTrap & super)
+{
+    *this = super;
+}
 
+SuperTrap& SuperTrap::operator=(const SuperTrap &super)
+{
+    hit = super.hit;
+    max_hit = super.max_hit;
+    energy = super.energy;
+    max_energy = super.max_energy;
+    level = super.level;
+    name = super.name;
+    melee_attack_damage = super.melee_attack_damage;
+    range_attack_damage = super.range_attack_damage;
+    armor_damage_reduction = super.armor_damage_reduction;
+    dead = super.dead;
+    return (*this);
+}
 SuperTrap::~SuperTrap() {}

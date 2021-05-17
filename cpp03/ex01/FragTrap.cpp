@@ -3,6 +3,7 @@
 FragTrap::~FragTrap() {
     std::cout << name + " GAME OVER\n";
 }
+FragTrap::FragTrap() {}
 FragTrap::FragTrap(std::string name)
 {
     std::cout << "Create Player " + name + "\n";
@@ -16,6 +17,23 @@ FragTrap::FragTrap(std::string name)
     this->range_attack_damage = 20;
     this->armor_damage_reduction = 5;
     this->dead = 0;
+}
+FragTrap::FragTrap(const FragTrap & frag)
+{
+    *this = frag;
+}
+FragTrap& FragTrap::operator=(const FragTrap & frag)
+{
+    hit = frag.hit;
+    max_hit = frag.max_hit;
+    energy = frag.energy;
+    max_energy = frag.max_energy;
+    level = frag.level;
+    name = frag.name;
+    melee_attack_damage = frag.melee_attack_damage;
+    armor_damage_reduction = frag.armor_damage_reduction;
+    dead = frag.dead;
+    return (*this);
 }
 
 void FragTrap::rangedAttack(std::string const & target)

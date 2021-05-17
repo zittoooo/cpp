@@ -19,7 +19,10 @@ private:
     
 public:
     ~FragTrap();
+    FragTrap();
     FragTrap(std::string name);
+    FragTrap(const FragTrap & frag);
+    FragTrap& operator=(const FragTrap & frag);
     void rangedAttack(std::string const & target);
     void meleeAttack(std::string const & target);
     void takeDamage(unsigned int amount);

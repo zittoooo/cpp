@@ -11,6 +11,7 @@ public:
     NinjaTrap();
     NinjaTrap(std::string name);
     ~NinjaTrap();
+    NinjaTrap& operator=(const NinjaTrap & ninja);
     void ninjaShoebox(FragTrap & Frag);
     void ninjaShoebox(ScavTrap & Scav);
     void ninjaShoebox(NinjaTrap & ninja);

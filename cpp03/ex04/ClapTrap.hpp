@@ -24,13 +24,16 @@ protected:
     std::string head;
 
 public:
+    ClapTrap();
+    ClapTrap(const ClapTrap & clap);
+   ~ClapTrap();
+   ClapTrap& operator=(const ClapTrap & clap);
     void rangedAttack(std::string const & target);
     void meleeAttack(std::string const & target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
     std::string getName();
-    ClapTrap();
-    ~ClapTrap();
+
 
 };
 

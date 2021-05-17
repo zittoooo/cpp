@@ -1,5 +1,6 @@
 #include "ScavTrap.hpp"
 
+ScavTrap::ScavTrap() {}
 ScavTrap::ScavTrap(std::string name)
 {
     std::cout << "Create ScavTrap " << name << "\n";
@@ -13,8 +14,29 @@ ScavTrap::ScavTrap(std::string name)
     this->range_attack_damage = 15;
     this->armor_damage_reduction = 3;
 }
+
+ScavTrap::ScavTrap(const ScavTrap & scav)
+{
+    *this = scav;
+}
+
 ScavTrap::~ScavTrap() {
     std::cout << this->name + "destroyed\n";
+}
+
+ScavTrap& ScavTrap::operator=(const ScavTrap & scav)
+{
+    hit = scav.hit;
+    max_hit = scav.max_hit;
+    energy = scav.energy;
+    max_energy = scav.max_energy;
+    level = scav.level;
+    name = scav.name;
+    melee_attack_damage = scav.melee_attack_damage;
+    range_attack_damage = scav.range_attack_damage;
+    armor_damage_reduction = scav.armor_damage_reduction;
+    dead = scav.dead;
+    return (*this);
 }
 
 void ScavTrap::rangedAttack(std::string const & target)

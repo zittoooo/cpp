@@ -6,7 +6,10 @@ class SuperTrap : public FragTrap, public NinjaTrap{
 private:
 
 public:
+    SuperTrap();
+    SuperTrap(const SuperTrap& super);
     SuperTrap(std::string name);
+    SuperTrap& operator=(const SuperTrap& super);
     ~SuperTrap();
 };
 
