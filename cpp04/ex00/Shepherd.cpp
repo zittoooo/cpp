@@ -25,5 +25,5 @@ Shepherd& Shepherd::operator=(const Shepherd& shepherd)
 
 void Shepherd::getPolymorphed() const
 {
-    std::cout << this->name << " has been turned into a cute stick!\n";
+    std::cout << name << " has been turned into a cute stick!\n";
 }
