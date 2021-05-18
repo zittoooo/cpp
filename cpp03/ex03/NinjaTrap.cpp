@@ -13,7 +13,7 @@ NinjaTrap::NinjaTrap(std::string name)
     melee_attack_damage = 60;
     range_attack_damage = 5;
     armor_damage_reduction = 0;
-    head = "R4G-TP Frag Ninja";
+    head = "R4G-TP Ninja";
     rangeMsg = "throwing stars";
     meleeMsg = "Swing dagger";
 }

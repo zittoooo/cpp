@@ -6,11 +6,6 @@ Fixed::Fixed()
     this->fixedPoint = 0;
 }
 
-Fixed::~Fixed()
-{
-    std::cout << "Destructor called\n";
-}
-
 Fixed::Fixed(const Fixed& fixed)
 {
     std::cout << "Copy constructor called\n";
@@ -18,6 +13,10 @@ Fixed::Fixed(const Fixed& fixed)
     *this = fixed;
 }
 
+Fixed::~Fixed()
+{
+    std::cout << "Destructor called\n";
+}
 Fixed& Fixed::operator=(const Fixed& fixed)
 {
     std::cout << "Assignation operator called\n";
