@@ -4,10 +4,10 @@
 
 class Enemy {
  protected:
+  Enemy(void);
   int hp;
   std::string type;
  public:
-  Enemy(void);
   Enemy(int hp, std::string const & type);
   Enemy(const Enemy& enemy);
   virtual ~Enemy(void);

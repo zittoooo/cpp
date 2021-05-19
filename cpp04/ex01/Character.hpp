@@ -7,11 +7,12 @@
 
 class Character {
  private:
+  Character(void);
   std::string name;
   int AP;
   AWeapon* weapon;
  public:
-  Character(void);
+  Character(std::string const & name);
   Character(const Character& character);
   virtual ~Character(void);
   Character& operator = (const Character& character);
