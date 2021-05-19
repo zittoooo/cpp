@@ -1,6 +1,7 @@
 #ifndef POWERFIST_HPP
 #define POWERFIST_HPP
 #include "AWeapon.hpp"
+#include "Enemy.hpp"
 
 class PowerFist : public AWeapon{
  public:
