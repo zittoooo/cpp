@@ -4,7 +4,6 @@
 
 void Fragtrap_play()
 {
-    srand((unsigned)time(NULL));
     std::string input;
 
     std::cout << "enter fragtrap name. ";
@@ -184,6 +183,7 @@ void ninjatrap_play()
 
 int main()
 {
+    srand((unsigned)time(NULL));
     std::string input;
     while (1)
     {
