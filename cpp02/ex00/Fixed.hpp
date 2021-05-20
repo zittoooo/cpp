@@ -10,9 +10,9 @@ private:
 	static const int fract = 8;
 public:
 	Fixed();
-	~Fixed();
 	Fixed(const Fixed& fixed);
-	Fixed&  operator=(const Fixed& fixed);
+	~Fixed();
+	Fixed& operator = (const Fixed& fixed);
 	int getRawBits(void) const;
 	void setRawBits(int const raw);
 };
