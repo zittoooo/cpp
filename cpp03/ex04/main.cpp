@@ -5,6 +5,7 @@
 
 void Fragtrap_play()
 {
+    srand((unsigned)time(NULL));
     std::string input;
 
     std::cout << "enter fragtrap name. ";
@@ -268,10 +269,11 @@ void supertrap_play()
 
 int main()
 {
+    srand((unsigned)time(NULL));
     std::string input;
     while (1)
     {
-        std::cout << "strat\nChoose between 1. FragTrap and 2. ScavTrap 3.Ninja Trap 4.Super Trap 5.exit\n";
+        std::cout << "start\nChoose between 1. FragTrap and 2. ScavTrap 3.Ninja Trap 4.Super Trap 5.exit\n";
         getline(std::cin, input);
         if (std::cin.eof())
             return (0);

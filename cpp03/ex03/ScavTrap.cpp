@@ -53,13 +53,10 @@ void ScavTrap::challengeNewcomer(std::string const & target)
         "Fireball 🔥",
         "Pulling hair 🧑‍🦲",
         "Slap on the cheek 🥺",
-        "Spraying pest control ",
+        "Spraying pest control 💦",
         "million volts ⚡️"
     };
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<int> dis(0, 4);
     energy -= 25;
-    std::cout << name << " attacks " << target << " " << stat[dis(gen)] << " skill\n";
+    std::cout << name << " attacks " << target << " " << stat[rand() % 5] << " skill\n";
     std::cout << name << " energy : " << energy << "\n";
 }

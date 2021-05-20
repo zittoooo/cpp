@@ -2,7 +2,7 @@
 # define CLAPTRAP_HPP
 # include <iostream>
 # include <string>
-# include <random>
+# include <time.h>
 
 class ClapTrap{
 protected:

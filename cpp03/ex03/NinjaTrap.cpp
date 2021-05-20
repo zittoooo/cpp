@@ -55,12 +55,9 @@ void NinjaTrap::ninjaShoebox(FragTrap & Frag)
         "Throwing a bomb 💣",
         "million volts ⚡️"
     };
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<int> dis(0, 4);
     energy -= 25;
     Frag.takeDamage(25);
-    std::cout << name << " attacks " << Frag.getName() << " " << stat[dis(gen)] << " skill\n";
+    std::cout << name << " attacks " << Frag.getName() << " " << stat[rand() % 5] << " skill\n";
     std::cout << name << " energy : " << energy << "\n";
 }
 
@@ -78,12 +75,9 @@ void NinjaTrap::ninjaShoebox(ScavTrap & Scav)
         "Throwing a bomb 💣",
         "million volts ⚡️"
     };
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<int> dis(0, 4);
     energy -= 25;
     Scav.takeDamage(25);
-    std::cout << name << " attacks " << Scav.getName() << " " << stat[dis(gen)] << " skill\n";
+    std::cout << name << " attacks " << Scav.getName() << " " << stat[rand() % 5] << " skill\n";
     std::cout << name << " energy : " << energy << "\n";
 }
 
@@ -101,11 +95,8 @@ void NinjaTrap::ninjaShoebox(NinjaTrap & ninja)
         "Throwing a bomb 💣",
         "million volts ⚡️"
     };
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<int> dis(0, 4);
     energy -= 25;
     ninja.takeDamage(25);
-    std::cout << name << " attacks " << ninja.getName() << " " << stat[dis(gen)] << " skill\n";
+    std::cout << name << " attacks " << ninja.getName() << " " << stat[rand() % 5] << " skill\n";
     std::cout << name << " energy : " << energy << "\n";
 }

@@ -3,6 +3,7 @@
 
 void Fragtrap_play()
 {
+    srand((unsigned)time(NULL));
     std::string input;
 
     std::cout << "enter fragtrap name. ";

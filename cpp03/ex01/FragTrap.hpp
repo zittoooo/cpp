@@ -2,7 +2,7 @@
 # define FRAGTRAP_HPP
 #include <iostream>
 #include <string>
-#include <random>
+#include <time.h>
 
 class FragTrap{
 private:

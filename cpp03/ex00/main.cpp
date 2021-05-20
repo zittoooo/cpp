@@ -2,6 +2,7 @@
 
 int main()
 {
+    srand((unsigned)time(NULL));
     std::string input;
 
     std::cout << "enter fragtrap name. ";

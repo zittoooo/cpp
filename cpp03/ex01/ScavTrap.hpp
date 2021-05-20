@@ -2,7 +2,7 @@
 # define SCAVTRAP_HPP
 #include <iostream>
 #include <string>
-#include <random>
+#include <time.h>
 
 class ScavTrap{
 private:
