@@ -22,6 +22,12 @@ int main()
     me->attack(b);
     std::cout << *me;
     me->attack(b);
+    if (b->getHP() <= 0)
+        delete b;
     std::cout << *me;
+
+    delete me;
+    delete pr;
+    delete pf;
     return 0;
 }

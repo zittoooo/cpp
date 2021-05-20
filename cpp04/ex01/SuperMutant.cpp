@@ -19,6 +19,8 @@ SuperMutant& SuperMutant::operator= (const SuperMutant& superMutant)
 }
 void SuperMutant::takeDamage(int damage)
 {
+    if (damage < 0)
+        return ;
     if (hp <= damage - 3)
         hp = 0;
     else

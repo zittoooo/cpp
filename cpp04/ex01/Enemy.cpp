@@ -15,6 +15,7 @@ Enemy& Enemy::operator= (const Enemy& enemy)
 {
     hp = enemy.hp;
     type = enemy.type;
+    return (*this);
 }
 std::string const& Enemy::getType() const { return (type); }
 int Enemy::getHP() const { return (hp); }

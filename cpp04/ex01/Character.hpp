@@ -21,6 +21,8 @@ class Character {
   void equip(AWeapon *weapon);
   void attack(Enemy* enemy);
   std::string const& getName() const;
+  int const& getAP() const;
+  AWeapon* getWeapon() const;
 };
 
 std::ostream& operator << (std::ostream& stm, const Character& character);

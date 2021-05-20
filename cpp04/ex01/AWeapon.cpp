@@ -13,6 +13,7 @@ AWeapon& AWeapon::operator = (const AWeapon& aWeapon)
     name=aWeapon.name;
     apcost=aWeapon.apcost;
     damage=aWeapon.damage;
+    return (*this);
 }
 
 std::string const AWeapon::getName() const { return (name); }

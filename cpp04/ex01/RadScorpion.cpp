@@ -20,6 +20,8 @@ RadScorpion& RadScorpion::operator= (const RadScorpion& radScorpion)
 
 void RadScorpion::takeDamage(int damage)
 {
+    if (damage < 0)
+        return ;
     if (hp <= damage)
         hp = 0;
     else
