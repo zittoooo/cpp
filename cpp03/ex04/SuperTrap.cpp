@@ -35,4 +35,7 @@ SuperTrap& SuperTrap::operator=(const SuperTrap &super)
     dead = super.dead;
     return (*this);
 }
-SuperTrap::~SuperTrap() {}
+SuperTrap::~SuperTrap()
+{
+    std::cout << "SuperTrap end\n";
+}

@@ -2,7 +2,7 @@
 
 FragTrap::FragTrap(){}
 FragTrap::~FragTrap() {
-    std::cout << name + " GAME OVER\n";
+    std::cout << name + " FragTrap dead\n";
 }
 FragTrap::FragTrap(std::string name)
 {

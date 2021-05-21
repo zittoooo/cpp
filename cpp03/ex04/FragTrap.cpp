@@ -1,6 +1,9 @@
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap() {}
+FragTrap::FragTrap()
+{
+    std::cout << "FragTrap\n";
+}
 FragTrap::FragTrap(const FragTrap &frag){
     *this = frag;
 }

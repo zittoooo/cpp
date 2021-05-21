@@ -1,6 +1,9 @@
 #include "NinjaTrap.hpp"
 
-NinjaTrap::NinjaTrap() {}
+NinjaTrap::NinjaTrap()
+{
+    std::cout << "new Ninjan\n";
+}
 NinjaTrap::NinjaTrap(const NinjaTrap& ninja)
 {
     *this = ninja;
