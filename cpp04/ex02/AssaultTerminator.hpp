@@ -6,11 +6,12 @@
 class AssaultTerminator : public ISpaceMarine
 {
 private:
-    /* data */
+
 public:
-    AssaultTerminator(/* args */);
-    AssaultTerminator(const AssaultTerminator &assault);
+    AssaultTerminator();
+    AssaultTerminator(const AssaultTerminator& assault);
     ~AssaultTerminator();
+    AssaultTerminator& operator = (const AssaultTerminator& assault);
     ISpaceMarine* clone() const;
     void battleCry() const;
     void rangedAttack() const;

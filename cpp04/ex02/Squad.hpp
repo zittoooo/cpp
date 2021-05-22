@@ -10,8 +10,10 @@ private:
     ISpaceMarine** units;
 
 public:
-    Squad(/* args */);
+    Squad();
+    Squad(const Squad& squad);
     ~Squad();
+    Squad& operator= (const Squad& squad);
     int getCount() const;
     ISpaceMarine* getUnit(int) const;
     int push(ISpaceMarine* marine);
