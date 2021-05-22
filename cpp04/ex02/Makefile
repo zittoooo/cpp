@@ -2,6 +2,7 @@ NAME = ex02
 SRC	 =  AssaultTerminator.cpp \
 		TacticalMarine.cpp \
 		Squad.cpp \
+		Ui.cpp \
 		main.cpp
 OBJ  = $(SRC:.cpp=.o)
 

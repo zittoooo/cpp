@@ -3,6 +3,7 @@
 AssaultTerminator::AssaultTerminator() { std::cout << "* teleports from space *\n"; }
 AssaultTerminator::AssaultTerminator(const AssaultTerminator& assault)
 {
+    std::cout << "* teleports from space *\n";
     *this = assault;
 }
 AssaultTerminator::~AssaultTerminator() { std::cout << "I’ll be back...\n"; }

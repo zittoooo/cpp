@@ -6,6 +6,7 @@ TacticalMarine::TacticalMarine()
 }
 TacticalMarine::TacticalMarine(const TacticalMarine& marine)
 {
+    std::cout << "Tactical Marine ready for battle!\n";
     *this = marine;
 }
 TacticalMarine::~TacticalMarine()
@@ -29,6 +30,7 @@ void TacticalMarine::battleCry() const
 }
 void TacticalMarine::rangedAttack() const
 {
+    
     std::cout << "* attacks with a bolter *\n";
 }
 void TacticalMarine::meleeAttack() const
