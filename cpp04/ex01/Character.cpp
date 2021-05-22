@@ -27,6 +27,11 @@ void Character::recoverAP()
 void Character::equip(AWeapon *weapon) { this->weapon = weapon; }
 void Character::attack(Enemy* enemy)
 {
+    if (!weapon)
+    {
+        std::cout << "I don't have a Weapon\n";
+        return ;
+    }
     if (AP < weapon->getAPCost())
         return ;
     std::cout << name << " attacks " << enemy->getType() 

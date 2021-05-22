@@ -12,6 +12,8 @@ int main()
     Enemy *b = new RadScorpion();
     AWeapon *pr = new PlasmaRifle();
     AWeapon *pf = new PowerFist();
+
+    me->attack(b);
     me->equip(pr);
     std::cout << *me;
     me->equip(pf);
