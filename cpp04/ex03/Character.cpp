@@ -18,13 +18,19 @@ Character::Character(const Character & character)
 Character::Character(std::string name)  : name(name) {}
 Character::~Character()
 {
-    if (inventory)
-        delete[] inventory;
+    for (int i = 0 ; i < 4; i++)
+    {
+        if (inventory[i])
+            delete inventory[i];
+    }
 }
 Character& Character::operator = (const Character & character)
 {
-    if (inventory)
-        delete[] inventory;
+    for (int i = 0 ; i < 4; i++)
+    {
+        if (inventory[i])
+            delete inventory[i];
+    }
     for (int i = 0; i < 4; i++)
     {
         if (character.inventory[i])
@@ -40,12 +46,13 @@ std::string const & Character::getName() const
 {
     return (name);
 }
-void Character::equip(AMateria * materia)
+
+void Character::equip(AMateria * m)
 {
     for (int i = 0; i < 4; i++)
     {
-        if (inventory[i] == 0){
-            inventory[i] = materia;
+        if (!inventory[i]){
+            inventory[i] = m;
             break ;
         }
     }
@@ -57,5 +64,6 @@ void Character::unequip(int idx)
 }
 void Character::use(int idx, ICharacter& target)
 {
-    inventory[idx]->use(target);
+    if (inventory[idx])
+        inventory[idx]->use(target);
 }

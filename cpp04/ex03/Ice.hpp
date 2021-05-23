@@ -6,14 +6,17 @@
 class Ice : public AMateria
 {
  private:
-    static std::string type;
+   std::string type;
  public:
     Ice();
     Ice(const Ice & ice);
     ~Ice();
+    Ice& operator = (const Ice& ice);
 
-    Ice & operater= (const Ice & ice);
-    void attackMsg(ICharacter& target);
+    std::string const & getType() const;
+    unsigned int getXP() const;
+    AMateria* clone() const;
+    void attackMsg(ICharacter& target) const;
 };
 
 #endif

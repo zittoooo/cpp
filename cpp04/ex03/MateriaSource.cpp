@@ -10,29 +10,35 @@ MateriaSource::MateriaSource(const MateriaSource & materiaSource)
     for(int i = 0; i < size; i++)
     {
         if (materiaSource.inventory[i])
-            this->inventory[i] = materiaSource.inventory[i]->clone();
+            inventory[i] = materiaSource.inventory[i]->clone();
         else
-            this->inventory[i] = 0;
+            inventory[i] = 0;
     }
-    this->size = materiaSource.size;
+    size = materiaSource.size;
 }
 MateriaSource::~MateriaSource()
 {
-    if (inventory)
-        delete[] inventory;
+    for (int i = 0 ; i < size; i++)
+    {
+        if (inventory[i])
+            delete inventory[i];
+    }
 }
 MateriaSource& MateriaSource::operator = (const MateriaSource& materiaSource)
 {
-    if (inventory)
-        delete[] inventory;
+    for (int i = 0 ; i < size; i++)
+    {
+        if (inventory[i])
+            delete inventory[i];
+    }
     for(int i = 0; i < size; i++)
     {
         if (materiaSource.inventory[i])
-            this->inventory[i] = materiaSource.inventory[i]->clone();
+            inventory[i] = materiaSource.inventory[i]->clone();
         else
-            this->inventory[i] = 0;
+            inventory[i] = 0;
     }
-    this->size = materiaSource.size;
+    size = materiaSource.size;
     return (*this);
 }
 

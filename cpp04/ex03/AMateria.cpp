@@ -8,7 +8,16 @@ AMateria::AMateria(const AMateria& materia)
     type = materia.type;
 }
 AMateria::~AMateria() {}
+
+AMateria& AMateria::operator= (const AMateria& materia)
+{
+    _xp = materia._xp;
+    type = materia.type;
+    return (*this);
+}
+
 std::string const & AMateria::getType() const { return (type); }
+
 unsigned int AMateria::getXP() const { return (_xp); }
 void AMateria::use(ICharacter & target)
 {
