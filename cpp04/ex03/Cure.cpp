@@ -1,22 +1,12 @@
 #include "Cure.hpp"
 
-Cure::Cure() { type = "cure"; }
-Cure::Cure(const Cure& cure) { type = cure.type; }
+Cure::Cure() : AMateria("cure") {}
+Cure::Cure(const Cure& cure) { *this = cure; }
 Cure::~Cure() {}
 Cure& Cure::operator=(const Cure &cure)
 {
-    type = cure.type;
+    _xp = cure._xp;
     return (*this);
-}
-
-std::string const & Cure::getType() const
-{
-    return (type);
-}
-
-unsigned int Cure::getXP() const
-{
-    return (_xp);
 }
 
 AMateria* Cure::clone() const

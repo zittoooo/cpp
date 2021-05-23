@@ -7,14 +7,7 @@ MateriaSource::MateriaSource()
 }
 MateriaSource::MateriaSource(const MateriaSource & materiaSource)
 {
-    for(int i = 0; i < size; i++)
-    {
-        if (materiaSource.inventory[i])
-            inventory[i] = materiaSource.inventory[i]->clone();
-        else
-            inventory[i] = 0;
-    }
-    size = materiaSource.size;
+    *this = materiaSource;
 }
 MateriaSource::~MateriaSource()
 {

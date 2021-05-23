@@ -13,8 +13,6 @@ class Ice : public AMateria
     ~Ice();
     Ice& operator = (const Ice& ice);
 
-    std::string const & getType() const;
-    unsigned int getXP() const;
     AMateria* clone() const;
     void attackMsg(ICharacter& target) const;
 };

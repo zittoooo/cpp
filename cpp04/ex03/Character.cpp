@@ -4,18 +4,18 @@ Character::Character()
 {
     memset(inventory, 0, sizeof(inventory));
 }
+
 Character::Character(const Character & character) 
 {
-    for (int i = 0; i < 4; i++)
-    {
-        if (character.inventory[i])
-            this->inventory[i] = character.inventory[i]->clone();
-        else
-            this->inventory[i] = 0;
-    }
-    this->name = character.name;
+    memset(inventory, 0, sizeof(inventory));
+    *this = character;
 }
-Character::Character(std::string name)  : name(name) {}
+
+Character::Character(std::string name)  : name(name)
+{
+    memset(inventory, 0, sizeof(inventory));
+}
+
 Character::~Character()
 {
     for (int i = 0 ; i < 4; i++)
@@ -24,8 +24,10 @@ Character::~Character()
             delete inventory[i];
     }
 }
+
 Character& Character::operator = (const Character & character)
 {
+    name = character.name;
     for (int i = 0 ; i < 4; i++)
     {
         if (inventory[i])
@@ -38,7 +40,6 @@ Character& Character::operator = (const Character & character)
         else
             this->inventory[i] = 0;
     }
-    name = character.name;
     return (*this);
 }
 
@@ -52,7 +53,6 @@ void Character::equip(AMateria * m)
     for (int i = 0; i < 4; i++)
     {
         if (!inventory[i]){
-            std::cout << i << '\n';
             inventory[i] = m;
             break ;
         }
@@ -65,6 +65,6 @@ void Character::unequip(int idx)
 }
 void Character::use(int idx, ICharacter& target)
 {
-    if (inventory[idx])
+    if (idx >= 0 && idx < 4 && inventory[idx])
         inventory[idx]->use(target);
 }

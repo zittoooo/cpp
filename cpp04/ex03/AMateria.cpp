@@ -4,8 +4,7 @@ AMateria::AMateria() : _xp(0) {}
 AMateria::AMateria(std::string const & type) : _xp(0), type(type) {}
 AMateria::AMateria(const AMateria& materia)
 {
-    _xp = materia._xp;
-    type = materia.type;
+    *this = materia;
 }
 AMateria::~AMateria() {}
 
