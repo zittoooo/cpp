@@ -21,7 +21,7 @@ unsigned int Cure::getXP() const
 
 AMateria* Cure::clone() const
 {
-    return ();
+    return (new Cure(*this));
 }
 
 void Cure::attackMsg(ICharacter & target) const

@@ -27,7 +27,7 @@ unsigned int Ice::getXP() const
 
 AMateria* Ice::clone() const
 {
-    return ();
+    return (new Ice(*this));
 }
 
 void Ice::attackMsg(ICharacter & target) const
