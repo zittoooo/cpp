@@ -5,7 +5,7 @@ Victim::Victim() {}
 Victim::Victim(std::string name)
 {
     this->name = name;
-    std::cout << name + " just appeared!\n";
+    std::cout << "Some random victim called " << name + " just appeared!\n";
 }
 Victim::Victim(const Victim& victim)
 {

@@ -6,7 +6,7 @@ PlasmaRifle::PlasmaRifle(const PlasmaRifle& plasmaRifle) { *this = plasmaRifle; 
 PlasmaRifle::~PlasmaRifle(void) {}
 PlasmaRifle& PlasmaRifle::operator = (const PlasmaRifle& plasmaRifle)
 {
-    AWeapon::operator=(plasmaRifle);
+    AWeapon::operator = (plasmaRifle);
     return (*this);
 }
 

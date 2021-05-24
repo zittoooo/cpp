@@ -1,6 +1,7 @@
 #ifndef RADSCORPION_HPP
 #define RADSCORPION_HPP
 #include "Enemy.hpp"
+#include <iostream>
 
 class RadScorpion : public Enemy{
  public:

@@ -10,9 +10,9 @@ AWeapon::AWeapon(const AWeapon& aWeapon)
 AWeapon::~AWeapon() {}
 AWeapon& AWeapon::operator = (const AWeapon& aWeapon)
 {
-    name=aWeapon.name;
-    apcost=aWeapon.apcost;
-    damage=aWeapon.damage;
+    name = aWeapon.name;
+    apcost = aWeapon.apcost;
+    damage = aWeapon.damage;
     return (*this);
 }
 

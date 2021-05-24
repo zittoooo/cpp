@@ -8,7 +8,7 @@ Peon::Peon(const Peon& peon)
 Peon::Peon(std::string name)
 {
     this->name = name;
-    std::cout << name + " just appeared!\n";
+    std::cout << "Some random victim called " << name + " just appeared!\n";
     std::cout << "Zog zog.\n";
 }
 Peon::~Peon()

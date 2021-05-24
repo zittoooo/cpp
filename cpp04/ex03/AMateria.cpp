@@ -18,6 +18,7 @@ AMateria& AMateria::operator= (const AMateria& materia)
 std::string const & AMateria::getType() const { return (type); }
 
 unsigned int AMateria::getXP() const { return (_xp); }
+
 void AMateria::use(ICharacter & target)
 {
     _xp += 10;

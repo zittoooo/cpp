@@ -1,5 +1,4 @@
 #include "RadScorpion.hpp"
-#include <iostream>
 
 RadScorpion::RadScorpion()
   : Enemy(80, "RadScorpion")
@@ -12,9 +11,9 @@ RadScorpion::RadScorpion(const RadScorpion& radScorpion)
     *this = radScorpion;
 }
 RadScorpion::~RadScorpion(void) { std::cout << "* SPROTCH *" << "\n"; }
-RadScorpion& RadScorpion::operator= (const RadScorpion& radScorpion)
+RadScorpion& RadScorpion::operator = (const RadScorpion& radScorpion)
 {
-    Enemy::operator=(radScorpion);
+    Enemy::operator = (radScorpion);
     return (*this);
 }
 

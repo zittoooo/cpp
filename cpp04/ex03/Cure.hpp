@@ -10,7 +10,7 @@ class Cure : public AMateria
     Cure();
     Cure(const Cure & cure);
     ~Cure();
-    Cure & operator= (const Cure & cure);
+    Cure& operator= (const Cure & cure);
 
     AMateria* clone() const;
     void attackMsg(ICharacter & target) const;

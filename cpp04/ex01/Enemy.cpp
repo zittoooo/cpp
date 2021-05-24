@@ -1,11 +1,7 @@
 #include "Enemy.hpp"
 
 Enemy::Enemy(void) {}
-Enemy::Enemy(int hp, std::string const & type)
-{
-    this->hp = hp;
-    this->type = type;
-}
+Enemy::Enemy(int hp, std::string const & type) : hp(hp), type(type) {}
 Enemy::Enemy(const Enemy& enemy)
 {
     *this = enemy;

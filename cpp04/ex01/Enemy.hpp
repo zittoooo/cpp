@@ -13,7 +13,7 @@ class Enemy {
   virtual ~Enemy(void);
   Enemy& operator = (const Enemy& enemy);
 
-  std::string const& getType() const;
+  std::string const & getType() const;
   int getHP() const;
   virtual void takeDamage(int damage);
 };
