@@ -8,19 +8,22 @@ class GradeTooLowException;
 class Bureaucrat
 {
  private:
-    std::string name;
+    Bureaucrat();
+    const std::string name;
     int grade;
+
     class GradeTooHighException : public std::exception
     {
-
+       public:
+         const char * what() const throw();
     };
     class GradeTooLowException : public std::exception
     {
-
+       public:
+         const char *what() const throw();
     };
 
  public:
-    Bureaucrat();
     Bureaucrat(Bureaucrat & bureaucrat);
     Bureaucrat(std::string name, int grade);
     ~Bureaucrat();
