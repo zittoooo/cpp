@@ -55,8 +55,8 @@ void testSquadAssignation(void)
   squad2.getUnit(0)->battleCry();
 
   Ui::colorPrint("\nrequired\n"
-                 "1. print TacticalMarine create msg\n"
-                 "2. print AssaultTerminator delete msg\n");
+                 "1. print AssaultTerminator delete msg\n"
+                 "2. print TacticalMarine create msg\n");
   squad2 = squad;
 
   Ui::colorPrint("\nrequired: print TacticalMarine battleCry\n");
