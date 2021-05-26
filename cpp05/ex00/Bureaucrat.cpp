@@ -21,12 +21,12 @@ Bureaucrat& Bureaucrat::operator = (Bureaucrat const & bureaucrat)
     return (*this);
 }
 
-std::string const Bureaucrat::getName()
+std::string Bureaucrat::getName() const
 {
     return (name);
 }
 
-int const Bureaucrat::getGrade()
+int Bureaucrat::getGrade() const
 {
     return (grade);
 }
@@ -53,4 +53,10 @@ const char * Bureaucrat::GradeTooHighException::what() const throw()
 const char * Bureaucrat::GradeTooLowException::what() const throw()
 {
     return ("Too low grade\n");
+}
+
+std::ostream& operator << (std::ostream& stm, const Bureaucrat& b)
+{
+    std::cout << "<" << b.getName() << "> , bureaucrat grade <" << b.getGrade() << ">.\n";
+    return (stm);
 }

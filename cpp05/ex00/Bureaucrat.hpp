@@ -1,6 +1,7 @@
 #ifndef BUREAUCRAT_HPP
 # define BUREAUCRAT_HPP
 # include <string>
+# include <iostream>
 
 class GradeTooHighException;
 class GradeTooLowException;
@@ -30,10 +31,11 @@ class Bureaucrat
     
     Bureaucrat& operator = (Bureaucrat const & bureaucrat);
 
-    std::string const getName();
-    int const getGrade();
+    std::string getName() const;
+    int getGrade() const;
     void incrementGrade();
     void decrementGrade();
 };
 
+std::ostream& operator<< (std::ostream& stm, const Bureaucrat& bureaucrat);
 #endif
