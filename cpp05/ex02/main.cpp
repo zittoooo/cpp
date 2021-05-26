@@ -5,10 +5,11 @@
 #include "ShrubberyCreationForm.hpp"
 
 #include "Ui.hpp"
+#include <time.h>
 
 void testPresidentialPardonForm()
 {
-  Bureaucrat br("gypark", Ui::readInt("Bureaucrat grade"));
+  Bureaucrat br("jiholee", Ui::readInt("Bureaucrat grade"));
   std::cout << br;
   PresidentialPardonForm ppf(Ui::readStr("Form target"));
   std::cout << ppf;
@@ -25,8 +26,7 @@ void testRobotomyRequestForm()
   // RobotomyRequestForm required grade
   // sign: 72
   // exec: 45
-  srand(time(0));
-  Bureaucrat br("gypark", Ui::readInt("Bureaucrat grade"));
+  Bureaucrat br("jiholee", Ui::readInt("Bureaucrat grade"));
   std::cout << br;
   RobotomyRequestForm rrf(Ui::readStr("Form target"));
   std::cout << rrf;
@@ -43,7 +43,7 @@ void testShrubberyCreationForm()
   // RobotomyRequestForm required grade
   // sign: 145
   // exec: 137
-  Bureaucrat br("gypark", Ui::readInt("Bureaucrat grade"));
+  Bureaucrat br("jiholee", Ui::readInt("Bureaucrat grade"));
   std::cout << br;
   ShrubberyCreationForm scf(Ui::readStr("Form target"));
   std::cout << scf;

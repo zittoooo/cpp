@@ -1,6 +1,7 @@
 #ifndef ROBOTOMY_REQUEST_FORM_HPP
 # define ROBOTOMY_REQUEST_FORM_HPP
 # include "Form.hpp"
+# include <stdlib.h>
 
 class RobotomyRequestForm : public Form
 {

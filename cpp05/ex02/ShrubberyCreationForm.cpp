@@ -5,7 +5,7 @@ ShrubberyCreationForm::ShrubberyCreationForm()
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const std::string target)
-: Form("shrubbery", 145, 137), target(target)
+: Form("shrubbery Form", 145, 137), target(target)
 {
 }
 
@@ -16,7 +16,6 @@ ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& form)
 
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {
-
 }
 
 ShrubberyCreationForm& ShrubberyCreationForm::operator= (const ShrubberyCreationForm& shrubbery)
@@ -28,6 +27,11 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator= (const ShrubberyCreation
 std::string ShrubberyCreationForm::getTarget() const
 {
     return (target);
+}
+
+const char * ShrubberyCreationForm::FileCannotOpenException::what() const throw()
+{
+  return ("file open fail\n");
 }
 
 void ShrubberyCreationForm::action() const
@@ -46,7 +50,7 @@ _- -   | | _- _\n\
     std::ofstream out(getTarget() + "_shrubbery");
     if (out.fail())
     {
-
+      throw FileCannotOpenException();
     }
     out << tree;
 }

@@ -23,6 +23,7 @@ class Bureaucrat
        public:
          const char *what() const throw();
     };
+    
 
  public:
     Bureaucrat(Bureaucrat & bureaucrat);
@@ -36,6 +37,7 @@ class Bureaucrat
     void incrementGrade();
     void decrementGrade();
     void signForm(Form& form);
+    void executeForm(Form const & form);
 };
 std::ostream& operator<< (std::ostream& stm, const Bureaucrat& bureaucrat);
 

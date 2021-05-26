@@ -8,6 +8,10 @@ class ShrubberyCreationForm : public Form
 private:
     ShrubberyCreationForm();
     const std::string target;
+    class FileCannotOpenException : public std::exception
+    {
+        const char * what() const throw();
+    };
 public:
     ShrubberyCreationForm(const std::string target);
     ShrubberyCreationForm(const ShrubberyCreationForm& form);

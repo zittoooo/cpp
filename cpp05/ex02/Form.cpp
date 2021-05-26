@@ -17,12 +17,17 @@ Form::~Form()
 
 const char * Form::GradeTooHighException::what() const throw()
 {
-    return ("Too High exception in form class\n");
+    return ("Too High grade\n");
 }
 
 const char *Form::GradeTooLowException::what() const throw()
 {
-    return ("Too Low exception in form class\n");
+    return ("Too Low grade\n");
+}
+
+const char *Form::NotSignedException::what() const throw()
+{
+    return ("not signed form\n");
 }
 
 int& Form::checkGrade(int& grade)
@@ -62,23 +67,25 @@ Form& Form::operator = (const Form& form)
 
 void Form::beSigned(Bureaucrat & bureaucrat)
 {
-    if (bureaucrat.getGrade() <= gradeSign)
-    {
-        signedForm = true;
-    }
-    else
-    {
+    if (bureaucrat.getGrade() > gradeSign)
         throw GradeTooLowException();
-    }
+    signedForm = true;
 }
 
 void Form::execute(Bureaucrat const & executor) const
 {
 
+    if (!signedForm)
+        throw NotSignedException();
+    if (gradeExe < executor.getGrade())
+        throw GradeTooLowException();
+    action();
 }
 
 std::ostream&operator << (std::ostream& stm, const Form& form)
 {
-    std::cout << "< " << form.getName();
+    std::cout << "< " << form.getName() << " > \n";
+    std::cout << "Sign grade: " << form.getGradeSign()<< "\n";
+    std::cout << "Execute grade: " << form.getGradeExe() << "\n";
     return (stm);
 }

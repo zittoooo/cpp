@@ -21,6 +21,10 @@ class Form {
     {
         const char * what() const throw();
     };
+    class NotSignedException : public std::exception
+    {
+        const char *what() const throw();
+    };
 
  public:
     Form();
@@ -39,8 +43,6 @@ class Form {
     
     void execute(Bureaucrat const & executor) const;
     virtual void action() const = 0;
-
-
 };
 
 std::ostream& operator << (std::ostream& stm, const Form& form);
