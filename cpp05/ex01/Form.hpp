@@ -4,6 +4,8 @@
 # include <string>
 # include <iostream>
 
+class Bureaucrat;
+
 class Form {
  private:
     Form();
@@ -26,9 +28,17 @@ class Form {
     Form(const Form& form);
     ~Form();
 
+    std::string getName() const;
+    int getGradeSign() const;
+    int getGradeExe() const;
+    bool getSignedForm() const;
+    int& checkGrade(int &grade);
+
     Form & operator = (const Form& form);
     void beSigned(Bureaucrat & bureaucrat);
 
 };
+
+std::ostream& operator << (std::ostream& stm, const Form& form);
 
 #endif

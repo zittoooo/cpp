@@ -8,10 +8,9 @@ int main()
     {
         try
         {
-            Bureaucrat jim("jim", Ui::readInt("grade"));
-            std::string operate = Ui::readStr("+ or -");
-            if (operate.compare("+") == 0) jim.incrementGrade();
-            if (operate.compare("-") == 0) jim.decrementGrade();
+            Bureaucrat jim("jim", Ui::readInt("jim grade"));
+            Form form(Ui::readStr("Document name"), Ui::readInt("Sign grade"), Ui::readInt("Exe grade"));
+            jim.signForm(form);
         }
         catch(const std::exception& e)
         {
