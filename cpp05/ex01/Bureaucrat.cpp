@@ -1,7 +1,7 @@
 #include "Bureaucrat.hpp"
 
 Bureaucrat::Bureaucrat() {}
-Bureaucrat::Bureaucrat(Bureaucrat & bureaucrat)
+Bureaucrat::Bureaucrat(Bureaucrat & bureaucrat) : name(bureaucrat.name)
 {
     *this = bureaucrat;
 }
@@ -60,13 +60,12 @@ void Bureaucrat::signForm(Form& form)
     try
     {
         form.beSigned(*this);
+        std::cout << "<" << getName() << "> Signed " << form.getName()<< "\n\n";
     }
     catch(const std::exception& e)
     {
         std::cout << "<" << getName() << "> cannot Signed " << form.getName()<< " because " << e.what() << "\n";
-        return ;
     }
-    std::cout << "<" << getName() << "> Signed " << form.getName()<< "\n\n";
 }
 
 std::ostream& operator << (std::ostream& stm, const Bureaucrat& b)
