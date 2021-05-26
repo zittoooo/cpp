@@ -1,7 +1,7 @@
 #include "Bureaucrat.hpp"
 
 Bureaucrat::Bureaucrat() {}
-Bureaucrat::Bureaucrat(Bureaucrat & bureaucrat)
+Bureaucrat::Bureaucrat(Bureaucrat & bureaucrat) : name(bureaucrat.name)
 {
     *this = bureaucrat;
 }
