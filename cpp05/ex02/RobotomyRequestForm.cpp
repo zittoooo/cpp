@@ -32,7 +32,6 @@ void RobotomyRequestForm::action() const
     std::cout << "drilling noises..\n";
     srand(time(0));
     int rd = rand() % 10;
-    std::cout << rd << "\n";
     if (rd <= 4)
         std::cout << "<" << getTarget() << "> " << "has been successfully robotomized\n";
     else
