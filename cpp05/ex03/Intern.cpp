@@ -6,6 +6,7 @@ Intern::Intern()
 
 Intern::Intern(const Intern& intern)
 {
+    (void)(intern);
 }
 
 Intern::~Intern()
@@ -14,6 +15,7 @@ Intern::~Intern()
 
 Intern& Intern::operator=(const Intern& intern)
 {
+    (void) intern;
     return (*this);
 }
 
