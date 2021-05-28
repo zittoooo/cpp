@@ -10,6 +10,9 @@
 
 class ScalarString
 {
+ private:
+  ScalarString();
+  std::string number;
  public:
   ScalarString(const char* number);
   ScalarString(const ScalarString& scalarString);
@@ -36,10 +39,11 @@ class ScalarString
    public:
     const char* what() const throw();
   };
-
- private:
-  ScalarString();
-  std::string number;
+  // class InfException : public std::exception
+  // {
+  //  public:
+  //   const char* what() const throw();
+  // };
 };
 
 #endif

@@ -60,9 +60,10 @@ ScalarString::operator double() const
   double n = std::atof(number.c_str());
   if (isnan(n))
     throw NanException();
+  // if (isinf(n))
+  //   throw InfException();
   return n;
 }
-
 
 const char* ScalarString::ImpossibleException::what() const throw()
 {
@@ -78,3 +79,8 @@ const char* ScalarString::NanException::what() const throw()
 {
   return "nan";
 }
+
+// const char* ScalarString::InfException::what() const throw()
+// {
+//   return "inf";
+// }
