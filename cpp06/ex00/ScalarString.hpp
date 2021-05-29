@@ -39,11 +39,6 @@ class ScalarString
    public:
     const char* what() const throw();
   };
-  // class InfException : public std::exception
-  // {
-  //  public:
-  //   const char* what() const throw();
-  // };
 };
 
 #endif

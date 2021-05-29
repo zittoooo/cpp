@@ -58,9 +58,4 @@ int main(int argc, char **argv)
     std::cout << "double : ";
     std::cout << e.what() << "\n";
   }
-  // catch(const ScalarString::InfException& e)
-  // {
-  //   std::cout << "double : ";
-  //   std::cout << e.what() << "\n";
-  // }
 }
