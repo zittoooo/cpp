@@ -1,23 +1,22 @@
 #include "whatever.hpp"
-# include <iostream>
+#include <cstring>
+#include <iostream>
+#include <string>
 
-int main()
-{
-    int a = 10;
-    int b = 20;
-
-    std::cout << "==== test int ====\n";
-    swap(a, b);
-    std::cout << a << " " <<  b << "\n";
-
-    std::cout << "min value : " << min(a, b) << "\n"; 
-    std::cout << "max value : " << max(a,b) << "\n";
-
-    std::cout << "\n==== test string ====\n";
-    std::string c = "abc";
-    std::string d = "efg";
-    swap(c, d);
-    std::cout << c << " " <<  d << "\n";
-    std::cout << "min value : " << min(c, d) << "\n"; 
-    std::cout << "max value : " << max(c ,d) << "\n";
+int main( void ) {
+    int a = 2;
+    int b = 3;
+    
+    ::swap( a, b );
+    std::cout << "a = " << a << ", b = " << b << std::endl;
+    std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
+    std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
+    std::string c = "chaine1";
+    std::string d = "chaine2";
+    
+    ::swap(c, d);
+    std::cout << "c = " << c << ", d = " << d << std::endl;
+    std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
+    std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
+    return 0;
 }
