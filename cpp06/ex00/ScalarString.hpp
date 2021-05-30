@@ -5,8 +5,8 @@
 #include <string>
 #include <exception>
 #include <limits>
-#include <math.h>
 #include <iomanip>
+
 
 class ScalarString
 {
@@ -30,11 +30,6 @@ class ScalarString
     const char* what() const throw();
   };
   class NonDisplayableException : public std::exception
-  {
-   public:
-    const char* what() const throw();
-  };
-  class NanException : public std::exception
   {
    public:
     const char* what() const throw();

@@ -40,22 +40,13 @@ int main(int argc, char **argv)
     std::cout << "float : ";
     std::cout << e.what() << "\n";
   }
-  catch(const ScalarString::NanException& e)
-  {
-    std::cout << "float : ";
-    std::cout << e.what() << "f\n";
-  }
 
-  try{
-    double i = static_cast<double>(scalarString);
-    std::cout << "double : ";
-    std::cout << std::fixed; 
-    std::cout.precision(1);
-    std::cout << i << "\n";
-  }
-  catch(const ScalarString::NanException& e)
-  {
-    std::cout << "double : ";
-    std::cout << e.what() << "\n";
-  }
+  // try{
+  //   double i = static_cast<double>(scalarString);
+  //   std::cout << "double : ";
+  //   std::cout << std::fixed; 
+  //   std::cout.precision(1);
+  //   std::cout << i << "\n";
+  // }
+  
 }
