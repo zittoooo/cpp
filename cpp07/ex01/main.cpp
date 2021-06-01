@@ -3,9 +3,9 @@
 #include <string>
 
 template<typename T>
-void addOne(T *arr)
+void addOne(T &arr)
 {
-    *arr += 1;
+    arr += 1;
 }
 
 int main()
