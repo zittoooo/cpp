@@ -6,6 +6,7 @@
 int main( void ) {
     int a = 2;
     int b = 3;
+    ::min(1, 2);
     
     ::swap( a, b );
     std::cout << "a = " << a << ", b = " << b << std::endl;
