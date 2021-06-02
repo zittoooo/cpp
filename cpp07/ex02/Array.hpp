@@ -14,8 +14,8 @@ class Array{
  public:
     Array()
     {
-        arr = new T[0];
-        _size = 1;
+        arr = NULL;
+        _size = 0;
     }
     Array(unsigned int n)
     {
@@ -41,7 +41,7 @@ class Array{
         {
             arr[i] = array.arr[i];
         }
-        return *this;
+        return (*this);
     }
     T& operator[] (unsigned int n)
     {
@@ -55,7 +55,7 @@ class Array{
             throw OutOfRangeException();
         return (arr[n]);
     }
-    unsigned int& size(void) const
+    unsigned int size(void) const
     {
         return (_size);
     }
