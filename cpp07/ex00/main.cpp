@@ -44,7 +44,14 @@ int main( void ) {
     std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
     std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
 
-    
+    double ab = 3.33;
+    double cd = 4.44;
+
+    swap(ab, cd);
+    std::cout << ab << " " << cd << std::endl;
+    std::cout << "min( ab, cd ): " << ::min(ab, cd) << std::endl;
+    std::cout << "max( ab, cd ) : "<< max(ab, cd) << std::endl;
+
     Awesome A(10);
     Awesome B(20);
 

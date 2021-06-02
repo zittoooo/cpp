@@ -36,6 +36,4 @@ public:
     int longestSpan() const;
 };
 
-
-
 #endif
