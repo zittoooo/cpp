@@ -9,7 +9,7 @@ class Array{
     unsigned int _size;
     class OutOfRangeException : public std::exception
     {
-        const char * what() const throw() { return "out out range\n"; }
+        const char * what() const throw() { return "out of range\n"; }
     };
  public:
     Array()
