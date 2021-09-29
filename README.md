@@ -3,8 +3,7 @@
 
 ## C++ Module 00
 
-Namespace, class, member functions, stdio stream,
-initialization lists, static, const, and lots of basic stuff
+🌟 Namespace, class, member functions, stdio stream, initialization lists, static, const, and lots of basic stuff
 
 * 네임스페이스 = 소속
 * 클래스
@@ -20,8 +19,7 @@ initialization lists, static, const, and lots of basic stuff
 
 ## C++ Module 01
 
-Memory allocation, references, pointers to members,
-switch
+🌟 Memory allocation, references, pointers to members, switch
 
 * new: new 연산자는 메모리를 할당하고 할당된 메모리의 주소가 포함된 포인터를 반환한다. delete 연산자로 해제한다.
 
@@ -32,8 +30,7 @@ switch
 
 
 ## C++ Module 02
-Ad-hoc polymorphism, operators overload and
-orthodox canonical classes
+🌟 Ad-hoc polymorphism, operators overload and orthodox canonical classes
 
 * 다형성: 하나의 객체가 여러 가지 타입을 가질 수 있는 것
 * 대입 연산자 오버로드
@@ -49,7 +46,8 @@ orthodox canonical classes
 
 
 ## C++ Module 03
-Inheritance
+🌟 Inheritance
+
 * 상속: 기존의 클래스에 기능을 추가하거나 재정의하여 새로운 클래스를 정의하는 것
   1. 기존에 작성된 클래스를 재활용
   2. 자식 클래스 설계 시 중복되는 멤버를 미리 부모 클래스에 작성해 놓으면, 자식 클래스에서는 해당 멤버를 작성하지 않아도 된다.
@@ -57,7 +55,7 @@ Inheritance
 출처: TCPschool.com
 
 ## C++ Module 04
-Subtype polymorphism, abstract classes, interfaces
+🌟 Subtype polymorphism, abstract classes, interfaces
 
 * 런타임 다형성
   1. Compile time polymorphism은 Overloading으로 구현되고, Runtime polymorphism은 Overriding으로 구현된다.
@@ -69,21 +67,21 @@ Subtype polymorphism, abstract classes, interfaces
 * 인터페이스: 다른 클래스를 작성할 때 기본이 되는 틀
 
 ## C++ Module 05
-Repetition and Exceptions
+🌟 Repetition and Exceptions
 
 * try catch throw
 
 ## C++ Module 06
-C++ Casts
+🌟 C++ Casts
 
 
 ## C++ Module 07
-c++ Templates
+🌟 c++ Templates
 
 * 템플릿: 사용자(프로그래머)가 원하는 타입을 넣어주면 딱딱 알아서 코드를 찍어내는 틀
 
 ## C++ Module 08
-Templated containers, iterators, algorithms
+🌟 Templated containers, iterators, algorithms
 
 * 컨테이너: 같은 타입의 여러 객체를 저장하는 일종의 집합. 컨테이너는 클래스 템플릿으로, 컨테이너 변수를 선언할 때 컨테이너에 포함할 요소의 타입을 명시할 수 있다.
 * iterator: STL 컨테이너의 구조나 요소의 타입과는 상관없이 컨테이너에 저장된 요소를 반복적으로 순회하여, 각각의 요소에 대한 접근을 제공하는 객체
