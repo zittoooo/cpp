@@ -21,7 +21,7 @@ private:
     SpellBook book;
 public:
     Warlock(std::string const &name, std::string const &title);
-    ~Warlock();
+    virtual ~Warlock();
 
     std::string const& getName() const;
     std::string const& getTitle() const;
